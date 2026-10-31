@@ -6,7 +6,7 @@
 
 body {
     font-family: "Lucida Grande", "Segoe UI", sans-serif;
-    /* Servidor estável do wallpaper clássico Aqua Graphite */
+    /* Servidor otimizado e estável para renderização do papel de parede */
     background: #68798e url('https://static.wikia.nocookie.net/wallpapers/images/2/23/Aqua_Graphite.jpg') no-repeat center center fixed;
     background-size: cover;
     width: 100vw;
@@ -16,7 +16,6 @@ body {
     user-select: none;
 }
 
-/* --- JANELA CLÁSSICA MAC OS X (CANTOS ARREDONDADOS) --- */
 .mac-window {
     position: absolute;
     width: 480px;
@@ -33,7 +32,6 @@ body {
     min-height: 200px;
 }
 
-/* Barra de Título (Área de Arraste) */
 .title-bar {
     height: 23px;
     background: linear-gradient(to bottom, #f3f3f3 0%, #bebebe 100%);
@@ -47,7 +45,6 @@ body {
     flex-shrink: 0;
 }
 
-/* Botões estilo Gema Mac OS 10.1 */
 .window-buttons {
     display: flex;
     gap: 7px;
@@ -85,7 +82,6 @@ body {
     padding: 0 80px;
 }
 
-/* --- ÁREA DE TEXTO (NOTEPAD TRADICIONAL COM QUEBRA AUTOMÁTICA) --- */
 .notepad-textarea {
     flex: 1;
     width: 100%;
@@ -100,14 +96,12 @@ body {
     outline: none;
     background: #ffffff;
     user-select: text;
-    /* Ativa quebra de texto e barra vertical controlada */
     white-space: pre-wrap;
     word-wrap: break-word;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
-/* --- CONTROLES DA BASE DA JANELA --- */
 .window-footer {
     height: 16px;
     background: #ededed;
@@ -120,7 +114,6 @@ body {
     flex-shrink: 0;
 }
 
-/* Indicador clássico de redimensionamento */
 .resize-handler {
     width: 14px;
     height: 14px;
