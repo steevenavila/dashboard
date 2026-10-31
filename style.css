@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lucida Grande", "Segoe UI", sans-serif;
+    /* Servidor estável do wallpaper clássico Aqua Graphite */
+    background: #68798e url('https://static.wikia.nocookie.net/wallpapers/images/2/23/Aqua_Graphite.jpg') no-repeat center center fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+}
+
+/* --- JANELA CLÁSSICA MAC OS X (CANTOS ARREDONDADOS) --- */
+.mac-window {
+    position: absolute;
+    width: 480px;
+    height: 640px;
+    background-color: #ffffff;
+    border-radius: 6px 6px 4px 4px;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+    border: 1px solid #666666;
+    display: flex;
+    flex-direction: column;
+    left: 60px;
+    top: 60px;
+    min-width: 250px;
+    min-height: 200px;
+}
+
+/* Barra de Título (Área de Arraste) */
+.title-bar {
+    height: 23px;
+    background: linear-gradient(to bottom, #f3f3f3 0%, #bebebe 100%);
+    border-bottom: 1px solid #8c8c8c;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    cursor: move;
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Botões estilo Gema Mac OS 10.1 */
+.window-buttons {
+    display: flex;
+    gap: 7px;
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    z-index: 10;
+}
+
+.btn-gema {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.3);
+    box-shadow: inset 0 1px 2px rgba(255,255,255,0.7), 0 1px 1px rgba(0,0,0,0.1);
+    cursor: pointer;
+    outline: none;
+}
+.btn-close { background: #ff5f56; }
+.btn-close:hover { background: #e04a42; }
+.btn-minimize { background: #ffbd2e; }
+.btn-minimize:hover { background: #e0a324; }
+.btn-maximize { background: #27c93f; }
+.btn-maximize:hover { background: #1fa331; }
+
+.window-title {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #111111;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 80px;
+}
+
+/* --- ÁREA DE TEXTO (NOTEPAD TRADICIONAL COM QUEBRA AUTOMÁTICA) --- */
+.notepad-textarea {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 12px;
+    font-family: "Lucida Grande", "Segoe UI", sans-serif;
+    font-size: 14px;
+    color: #000000;
+    line-height: 1.5;
+    resize: none;
+    outline: none;
+    background: #ffffff;
+    user-select: text;
+    /* Ativa quebra de texto e barra vertical controlada */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* --- CONTROLES DA BASE DA JANELA --- */
+.window-footer {
+    height: 16px;
+    background: #ededed;
+    border-top: 1px solid #b4b4b4;
+    border-radius: 0 0 3px 3px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-shrink: 0;
+}
+
+/* Indicador clássico de redimensionamento */
+.resize-handler {
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(135deg, transparent 30%, #8a8a8a 30%, #8a8a8a 40%, transparent 40%, transparent 55%, #8a8a8a 55%, #8a8a8a 65%, transparent 65%, transparent 80%, #8a8a8a 80%, #8a8a8a 90%, transparent 90%);
+    cursor: se-resize;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    z-index: 10;
+}
