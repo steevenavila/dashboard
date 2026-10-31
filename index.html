@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua OS X - Notepad Frugal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- JANELA DO NOTEPAD CLÁSSICO -->
+    <div class="mac-window" id="notepadWindow">
+        <!-- Barra de Título Arrastável -->
+        <div class="title-bar" id="windowHeader">
+            <!-- As três gemas originais executando as funções de arquivo -->
+            <div class="window-buttons">
+                <button class="btn-gema btn-close" id="btnNew" title="Novo Arquivo (Descartar)"></button>
+                <button class="btn-gema btn-minimize" id="btnOpen" title="Abrir Arquivo (.txt)"></button>
+                <button class="btn-gema btn-maximize" id="btnSave" title="Salvar Arquivo (.txt)"></button>
+            </div>
+            
+            <div class="window-title" id="windowTitle">Untitled</div>
+        </div>
+
+        <!-- Área de Texto com quebra de linha automática e scroll vertical -->
+        <textarea class="notepad-textarea" id="notepadCore" placeholder="Comece a digitar aqui..."></textarea>
+
+        <!-- Barra Base com Área do Redimensionador Manual -->
+        <div class="window-footer">
+            <div class="resize-handler" id="windowResizer"></div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
